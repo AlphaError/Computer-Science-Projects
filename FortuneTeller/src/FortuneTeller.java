@@ -40,10 +40,10 @@ public class FortuneTeller extends JFrame
   {
     // Pick and display a random fortune:
 
-    int randIndex = (int)((fortunes.length-1) * Math.random());
+    int randIndex = (int)((fortunes.length) * Math.random());
 
     display.setText("  " + fortunes[randIndex] );
-    ding.play();
+    ding.play();  //ding! ding! ding! ding! ding! ding! ding! ding! ding! ding! ding! ding! ding! ding! ding! ding! ding! ding! ding! ding! ding! ding! ding! ding! ding! ding! ding! ding! ding! ding! ding! ding! ding! ding! ding! ding! ding! ding! ding! ding! ding! ding! ding! ding! ding! ding! ding! ding! ding! ding! ding! ding! ding! ding! ding! ding! ding! ding! ding! ding! ding! ding! ding! ding! ding! ding! ding! ding! ding! ding! ding! ding! ding! ding! ding! ding! ding! ding! ding! ding! ding! ding! ding! ding! ding! ding! ding! ding! ding! ding! ding! ding! ding! ding! ding! ding! ding! ding! ding! ding! ding! ding! ding! ding! ding! ding! ding! ding! ding! ding! ding! ding! ding! ding! ding! ding! ding! ding! ding! ding! ding! ding! ding! ding! ding! ding! ding! ding! ding! ding! ding! ding! 
   }
 
   public static void main(String[] args)
