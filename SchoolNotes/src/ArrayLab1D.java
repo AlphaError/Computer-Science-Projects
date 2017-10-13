@@ -35,13 +35,19 @@ public class ArrayLab1D {
 	}
 	
 	public static int computeScore(String word) {
-		String[] alphabet = {};
-		int[] pointValues = {};
-		for(int i = 0; i < word.length(); i++) {
-			//syntax for letter in a word
-			if(alphabet.indexOf() != -1) {
-				
+		String[] alphabet = {"A","B","C","D","E","F","G","H","I","J","K","L","M","N",
+				"O","P","Q","R","S","T","U","V","W","X","Y","Z"};
+		int[] pointValues = {1,2,3,4,1,4,2,4,1,8,5,1,3,1,1,3,10,1,1,1,1,4,4,8,4,10};
+		int playerScore = 0;
+		
+		for(int i = 0; i < word.length(); i++) { //for every letter in the word
+			for(int j = 0; j < alphabet.length; j++) { //for every letter in the alphabet array
+				if(alphabet[j].equalsIgnoreCase(word.charAt(i) + "")) { //if the alphabet letter is the wor'ds letter
+					playerScore += pointValues[j]; //add the point value in correlation with the alphabet letter's index
+				}
 			}
+			//can also do if(alphabet.indexOf(word.charAt(i) + "") >= 0) {} instead of the for loop
 		}
+		return playerScore;
 	}
 }

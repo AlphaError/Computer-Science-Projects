@@ -25,8 +25,8 @@ public class TestFile {
 		
 		System.out.println("Please Enter: ");
 		String word = scan.next(); //next(), nextInt(), nextString()
-		
-	    
+
+//	    System.out.println();
 	}
 	
 }
