@@ -36,7 +36,7 @@ public class ClassNotes4 {
 	 *  --called the index or subscript
 	 *  Indices
 	 *  -index is written within [] --> ex. a[k]
-	 *  --a = array name, k = index
+	 *  --a = array name, k = index (number)
 	 *  -Indices always start from 0 --> nth element = a[n-1]
 	 *  --possibilities: a[k-2], a[(int)(6*Math.random())] //0 to 6 with 6 exclusive but 0 inclusive
 	 *  -array is declared without a fixed length (unchangable)

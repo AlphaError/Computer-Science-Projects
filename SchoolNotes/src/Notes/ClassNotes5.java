@@ -22,7 +22,7 @@ public class ClassNotes5 {
 		int sum = 0;
 		for(int i = 0; i < scores.length; i++) { //number of rows
 			int s = scores[i];
-			sum += s;
+			sum += s; //or just sum += scores[i];
 		}
 		//aka
 		int[] scores1 = {};
@@ -33,7 +33,7 @@ public class ClassNotes5 {
 		
 //		int sum = 0;
 		int[][] scores2 = null;
-		for(int r = 0; r < scores.length; r++) {
+		for(int r = 0; r < scores2.length; r++) {
 			for(int c = 0; c < scores2[0].length; c++) {
 				int s = scores2[r][c];
 				sum += s;
@@ -42,7 +42,7 @@ public class ClassNotes5 {
 		//aka
 //		int[][] scores2 = null;
 //		int sum = 0;
-		for(int[] num: scores2) {
+		for(int[] num: scores2) { //for each element in scores2 as refrenced by num
 			for(int s: num) {
 				sum += s;
 				//int[][] scores is possible because your re-initializing a new array
