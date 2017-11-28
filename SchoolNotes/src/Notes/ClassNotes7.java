@@ -15,6 +15,8 @@ public class ClassNotes7 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		System.out.println(addSquares(3));
+		System.out.println(factorial(10));
+		System.out.println(reverse("palendrome"));
 	}
 
 	/* Recursion
@@ -49,5 +51,52 @@ public class ClassNotes7 {
 		Tangerine Knight’s Quest -  lvl B (the start) acts as the starting input,
 		and lvl 1 is the Base Case
 	 */
-
+	
+	/* Recursive Methods
+	 * * recursion is based on the mathematical concept that the definition of a function
+	 * *  can use itself aka Inception
+	 * * f(n) = n! (n-factorial)
+	 */
+	public static int factorial(int n) {
+		if(n == 1) {
+			return 1;
+		}
+		else {
+			return factorial(n-1) * n;
+		}
+	}
+	//ex: n=4 -> fac(3) * 4
+	//          fac(3) = fac(2) * 3
+	//                  fac(2) = fac(1) * 2
+	//                          fac(1) = 1
+	// so then 1*2*3*4 = 24
+	public static String reverse(String s) {
+		if(s.length() >= 2) {
+			s = reverse(s.substring(1)) + s.charAt(0);
+		}
+		return s;
+	}
+	//ex: reverse("AB") -> reverse("B") + "A"
+	//                    reverse("B") = "B"
+	//  final val = "BA"
+	
+	
+	/*
+	 * process(VE) + " " + process(HA)
+	 * E + " " + V    +   A + " " + H
+	 * + " " +
+	 * process(UN) + " " + F
+	 * N + " " + U
+	 * 
+	 * E + V + A + H + N + U + F
+	 */
+	public static int findMin(int[] list, int n) {
+		if(n == 1) {
+			return list[n-1];
+		}
+		else{
+			return Math.min(list[n-1], findMin(list, n-1));
+		}
+	}
+	
 }
