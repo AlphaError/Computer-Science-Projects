@@ -100,7 +100,7 @@ public class ClassNotes6 {
 	ArrayList<String> namesTwo = new ArrayList<String>(10000);
 	
 //	***********************************
-	int size();         //Returns the number of elemeents currently stored in this list
+	int size();         //Returns the number of elements currently stored in this list
 	boolean isEmpty();  //Returns True if the list is empty (false otherwise)
 	boolean add(E elmt); //Appends elmt at the end of the list
 	void add(int i, E elmt); //Inserts elmt into the i-th position; shifts the element currently at
@@ -110,12 +110,13 @@ public class ClassNotes6 {
 	get(int i);       //returns the value of the i-th element
 	set(int i, E elmt);  //Replaces the i-th element with elmt and returns the old value
 	remove(int i);    //Removes the i-th element from the list and return sits value; shifts the
-		//subsequent elements (if any) to the left (decriments their indicies by one)
+		//subsequent elements (if any) to the left (decrements their indices by one)
 	boolean contains(Object obj); //Returns true if this list contains any elements equal to obj,
 		//(the equals method is useful for comparison)
 	int indexOf(Object obj);  //Returns the index of the first occurence of obj in this list
 		//or -1 if the obj is not found
 	String toString()//Returns a string representation of the this list as [elmt0,elmt1,...elmtN-1]
 	
-	
+	//u must put a wrapper class in the <> of a 
+	//wrapper class (Integer) vs data type (int)
 }
