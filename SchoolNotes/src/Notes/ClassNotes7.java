@@ -99,4 +99,9 @@ public class ClassNotes7 {
 		}
 	}
 	
+	/* Friday Quiz
+	 * * We'll have the java reference sheet but the quiz is entirely short response
+	 * * * in the style of the other sheets we got
+	 */
+	
 }
