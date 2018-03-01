@@ -15,7 +15,7 @@ public class HumanPlayer
 
   private boolean myTurn;
 
-  public HumanPlayer(Chomp program, ChompGame game, BoardPanel board)
+  public HumanPlayer(Chomp program, ChompGame game, BoardPanel board, String playerName)
   {
     this.program = program;
     this.game = game;

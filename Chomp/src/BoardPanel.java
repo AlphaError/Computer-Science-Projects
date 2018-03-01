@@ -9,16 +9,18 @@ import javax.swing.JPanel;
 
 public class BoardPanel extends JPanel
 {
-  private final int ROWS = 4, COLS = 7;   // board dimensions
-  private final int CELLSIZE = 40;
+  private int ROWS = 4, COLS = 7;   // board dimensions
+  private int CELLSIZE = 85;
   private final Color chocolate = new Color(110, 70, 50);
 
   private int tentativeRow, tentativeCol, displayCount;
 
   // Constructor
-  public BoardPanel()
+  public BoardPanel(int length, int width)
   {
-    setPreferredSize(new Dimension(COLS * CELLSIZE, ROWS * CELLSIZE));
+	ROWS = width;
+	COLS = length;
+    setPreferredSize(new Dimension(COLS * CELLSIZE, ROWS * CELLSIZE)); // 160, 280 --> original dimensions
     setBackground(Color.LIGHT_GRAY);
   }
 

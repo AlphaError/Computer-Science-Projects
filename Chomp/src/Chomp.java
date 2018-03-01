@@ -5,6 +5,7 @@
 
 import java.awt.Color;
 import java.awt.Container;
+import java.util.Scanner;
 import java.awt.BorderLayout;
 import javax.swing.JFrame;
 import javax.swing.JTextField;
@@ -16,7 +17,7 @@ public class Chomp extends JFrame
   private Player players[];
   private int currentPlayer;
 
-  public Chomp()
+  public Chomp(int length, int width)
   {
     Container c = getContentPane();
 
@@ -25,18 +26,19 @@ public class Chomp extends JFrame
     display.setEditable(false);
     c.add(display, BorderLayout.NORTH);
 
-    BoardPanel board = new BoardPanel();
+    BoardPanel board = new BoardPanel(length, width);
     c.add(board, BorderLayout.CENTER);
 
     game = new ChompGame(board);
 
-    HumanPlayer human = new HumanPlayer(this, game, board);
-    ComputerPlayer computer = new ComputerPlayer(this, game, board);
-    computer.setStrategy(new Chomp4by7Strategy());
+    HumanPlayer human1 = new HumanPlayer(this, game, board, "player1");
+//    ComputerPlayer computer = new ComputerPlayer(this, game, board);
+//    computer.setStrategy(new Chomp4by7Strategy());
+    HumanPlayer human2 = new HumanPlayer(this, game, board, "player2");
 
     players = new Player[2];
-    players[0] = human;
-    players[1] = computer;
+    players[0] = human1;
+    players[1] = human2;
     currentPlayer = 0;
 
     display.setText(" You go first...");
@@ -61,9 +63,16 @@ public class Chomp extends JFrame
 
   public static void main(String[] args)
   {
-    Chomp window = new Chomp();
-    window.setTitle("Chomp");
-    window.setBounds(200, 200, 300, 225);
+	System.out.println("Bounds...");
+	Scanner scan = new Scanner(System.in);
+	System.out.println("l?");
+	int length = scan.nextInt();
+	System.out.println("w?");
+	int width = scan.nextInt();
+    Chomp window = new Chomp(length, width);
+    
+    window.setTitle("Choomp"); //chomp
+    window.setBounds(400, 400, 601, 410);
     window.setDefaultCloseOperation(EXIT_ON_CLOSE);
     window.setResizable(false);
     window.setVisible(true);
